@@ -68,11 +68,9 @@ void	check_command_files(t_cmd *command)
 
 void	run_heredoc(t_cmd *command)
 {
-	int		fd;
 	int		status;
 	pid_t	child_pid;
 
-	fd = 0;
 	signal(SIGINT, SIG_IGN);
 	child_pid = fork();
 	if (child_pid == 0)
